@@ -1,6 +1,10 @@
 # Murmur
 
-A local-first voice-to-text desktop application with AI-powered text cleanup. Murmur transcribes your speech using Whisper and optionally refines the output with a local LLM. All processing happens on your machine by default, with optional cloud providers available for users who prefer them.
+**The local-first voice dictation app that turns your speech into polished text.**
+
+Murmur is an AI-powered dictation tool that lets you type with your voice in any application. Speak naturally, and Murmur transcribes your words, cleans up filler words, fixes grammar, and pastes the result directly where you need it. All processing runs locally on your machine by default, keeping your data private and working offline.
+
+Why type when you can speak? Dictation is faster than typing, and Murmur makes it effortless.
 
 ## Table of Contents
 
@@ -12,7 +16,7 @@ A local-first voice-to-text desktop application with AI-powered text cleanup. Mu
   - [Building from Source](#building-from-source)
 - [Usage](#usage)
   - [First Run Setup](#first-run-setup)
-  - [Recording and Transcription](#recording-and-transcription)
+  - [Dictating](#dictating)
   - [AI Text Cleanup](#ai-text-cleanup)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Configuration](#configuration)
@@ -30,31 +34,38 @@ A local-first voice-to-text desktop application with AI-powered text cleanup. Mu
 
 ## Features
 
-### Local-First Processing
-- **Local Speech-to-Text**: Uses Whisper.cpp for fast, accurate transcription entirely on your machine
-- **Local AI Text Cleanup**: Processes transcriptions through Phi-3 Mini to remove filler words, fix grammar, and improve clarity
+### Intelligent Dictation
+- **AI-Powered Cleanup**: Automatically removes filler words (um, uh, like), fixes grammar, and adds proper punctuation
+- **Multiple Tone Modes**: Switch between basic, formal, casual, or custom styles to match your context
+- **Works Everywhere**: Dictate into any application - email, documents, chat, code editors, and more
+- **Global Hotkey**: Trigger dictation from anywhere with a customizable keyboard shortcut
+- **Auto-Paste**: Transcribed text is automatically inserted where your cursor is
+
+### Local-First Privacy
+- **On-Device Processing**: Speech recognition and AI cleanup run entirely on your machine
 - **No Internet Required**: Full functionality without any network connection
 - **Your Data Stays Yours**: Audio and transcriptions never leave your device unless you choose cloud providers
+- **No Subscription Required**: Own the software, run it forever
 
 ### Optional Cloud Providers
 - **Cloud Transcription**: Connect to OpenAI Whisper, Deepgram, or Groq for cloud-based transcription
 - **Cloud LLM Cleanup**: Use OpenAI, Anthropic, or other providers for text refinement
 - **Flexible Configuration**: Mix local and cloud services based on your preferences
 
-### Core Features
-- **Global Hotkey**: Trigger recording from any application with a customizable keyboard shortcut
-- **Auto-Paste**: Automatically paste transcribed text into the active window
+### Productivity Features
 - **Floating Overlay**: Minimalist overlay window showing recording status with real-time waveform visualization
-- **Multiple Cleanup Modes**: Choose from basic, formal, casual, or custom cleanup styles
-- **Transcription History**: Browse and search past transcriptions with SQLite-backed storage
-- **System Tray Integration**: Runs quietly in the background with quick access from the system tray
+- **Transcription History**: Browse and search past transcriptions
+- **System Tray Integration**: Runs quietly in the background, always ready when you need it
+- **Toggle or Hold Modes**: Press to start/stop or hold to record - your choice
 
 ## How It Works
 
-1. **Record**: Press the global hotkey (default: `Ctrl+Shift+Space`) to start recording
-2. **Transcribe**: Murmur captures audio from your microphone and transcribes it locally using Whisper.cpp (or optionally via cloud providers)
-3. **Cleanup** (optional): The transcription is refined by a local LLM to improve readability (or optionally via cloud LLMs)
-4. **Paste**: The final text is automatically pasted into your active application
+1. **Activate**: Press the global hotkey (default: `Ctrl+Shift+Space`) from any application
+2. **Speak**: Talk naturally - the overlay shows you're recording
+3. **AI Processes**: Your speech is transcribed and cleaned up locally in seconds
+4. **Done**: Polished text appears right where your cursor was
+
+No copying, no pasting, no editing. Just speak and it's there.
 
 ## Requirements
 
@@ -140,30 +151,30 @@ On first launch, Murmur presents a setup wizard to configure:
 2. **AI Models**: Download the required Whisper and LLM models
 3. **Hotkey Configuration**: Set your preferred recording trigger
 
-### Recording and Transcription
+### Dictating
 
-1. **Start Recording**: Press the global hotkey (default: `Ctrl+Shift+Space`)
-2. **Speak**: The overlay window appears showing a waveform visualization
-3. **Stop Recording**: Press the hotkey again (toggle mode) or release the key (hold mode)
-4. **Receive Text**: The transcribed (and optionally cleaned) text is pasted into your active application
+1. **Start**: Press the global hotkey (default: `Ctrl+Shift+Space`) from any application
+2. **Speak**: Talk naturally while the overlay shows a waveform visualization
+3. **Stop**: Press the hotkey again (toggle mode) or release the key (hold mode)
+4. **Done**: Your polished text appears where your cursor was
 
 ### AI Text Cleanup
 
-Murmur can optionally process transcriptions through a local LLM to:
+Murmur's AI cleanup transforms raw speech into clean, readable text:
 
-- Remove filler words (um, uh, like, you know)
-- Fix grammatical errors
-- Improve punctuation and formatting
-- Adjust tone based on selected mode
+- Removes filler words (um, uh, like, you know)
+- Fixes grammatical errors
+- Adds proper punctuation and formatting
+- Adjusts tone to match your selected mode
 
 **Cleanup Modes:**
 
-| Mode | Description |
-|------|-------------|
-| Basic | Removes filler words and fixes obvious errors |
-| Formal | Professional tone suitable for emails and documents |
-| Casual | Conversational tone for chat and messaging |
-| Custom | User-defined system prompt for specialized formatting |
+| Mode | Description | Best For |
+|------|-------------|----------|
+| Basic | Removes filler words and fixes obvious errors | Quick notes, casual use |
+| Formal | Professional tone with proper structure | Emails, documents, reports |
+| Casual | Conversational tone | Chat, messaging, social media |
+| Custom | Your own system prompt | Specialized formatting needs |
 
 ### Keyboard Shortcuts
 
@@ -379,4 +390,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-**Murmur** - Local-first voice to text. Speak freely, type accurately.
+**Murmur** - Local-first voice dictation. Speak naturally, type effortlessly.
