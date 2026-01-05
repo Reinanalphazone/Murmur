@@ -1,6 +1,6 @@
 # Murmur
 
-A privacy-focused voice-to-text desktop application with local AI-powered text cleanup. Murmur transcribes your speech using OpenAI's Whisper model and optionally refines the output with a local LLM, all without sending data to external servers.
+A local-first voice-to-text desktop application with AI-powered text cleanup. Murmur transcribes your speech using Whisper and optionally refines the output with a local LLM. All processing happens on your machine by default, with optional cloud providers available for users who prefer them.
 
 ## Table of Contents
 
@@ -30,21 +30,30 @@ A privacy-focused voice-to-text desktop application with local AI-powered text c
 
 ## Features
 
-- **Offline Speech-to-Text**: Uses Whisper.cpp for fast, accurate transcription without internet connectivity
-- **Local AI Text Cleanup**: Optionally processes transcriptions through Phi-3 Mini to remove filler words, fix grammar, and improve clarity
+### Local-First Processing
+- **Local Speech-to-Text**: Uses Whisper.cpp for fast, accurate transcription entirely on your machine
+- **Local AI Text Cleanup**: Processes transcriptions through Phi-3 Mini to remove filler words, fix grammar, and improve clarity
+- **No Internet Required**: Full functionality without any network connection
+- **Your Data Stays Yours**: Audio and transcriptions never leave your device unless you choose cloud providers
+
+### Optional Cloud Providers
+- **Cloud Transcription**: Connect to OpenAI Whisper, Deepgram, or Groq for cloud-based transcription
+- **Cloud LLM Cleanup**: Use OpenAI, Anthropic, or other providers for text refinement
+- **Flexible Configuration**: Mix local and cloud services based on your preferences
+
+### Core Features
 - **Global Hotkey**: Trigger recording from any application with a customizable keyboard shortcut
 - **Auto-Paste**: Automatically paste transcribed text into the active window
 - **Floating Overlay**: Minimalist overlay window showing recording status with real-time waveform visualization
 - **Multiple Cleanup Modes**: Choose from basic, formal, casual, or custom cleanup styles
 - **Transcription History**: Browse and search past transcriptions with SQLite-backed storage
 - **System Tray Integration**: Runs quietly in the background with quick access from the system tray
-- **Privacy First**: All processing happens locally on your machine
 
 ## How It Works
 
 1. **Record**: Press the global hotkey (default: `Ctrl+Shift+Space`) to start recording
-2. **Transcribe**: Murmur captures audio from your microphone and transcribes it using Whisper
-3. **Cleanup** (optional): The transcription is refined by a local LLM to improve readability
+2. **Transcribe**: Murmur captures audio from your microphone and transcribes it locally using Whisper.cpp (or optionally via cloud providers)
+3. **Cleanup** (optional): The transcription is refined by a local LLM to improve readability (or optionally via cloud LLMs)
 4. **Paste**: The final text is automatically pasted into your active application
 
 ## Requirements
@@ -175,10 +184,13 @@ Access settings through the system tray menu or the main application window.
 
 ### AI Settings
 
+- **Transcription Provider**: Choose between local (Whisper.cpp) or cloud providers (OpenAI, Deepgram, Groq)
 - **Enable Cleanup**: Toggle LLM-based text cleanup
+- **Cleanup Provider**: Choose between local (Phi-3 Mini) or cloud providers (OpenAI, Anthropic)
 - **Cleanup Mode**: Select basic, formal, casual, or custom
 - **Custom Prompt**: Define your own system prompt for text processing
-- **Model Status**: View and manage downloaded AI models
+- **Model Status**: View and manage downloaded local AI models
+- **API Keys**: Configure API keys for cloud providers (only if using cloud services)
 
 ### General Settings
 
@@ -302,14 +314,31 @@ Build artifacts are located in `src-tauri/target/release/bundle/`.
 
 ## Models
 
-Murmur uses the following AI models, stored in `%APPDATA%/murmur/models/` (Windows) or `~/.config/murmur/models/` (Linux/macOS):
+### Local Models (Default)
+
+Murmur uses the following local AI models, stored in `%APPDATA%/murmur/models/` (Windows) or `~/.config/murmur/models/` (Linux/macOS):
 
 | Model | File | Size | Purpose |
 |-------|------|------|---------|
-| Whisper Base (English) | `ggml-base.en.bin` | ~142 MB | Speech-to-text transcription |
-| Phi-3 Mini 4K Instruct | `phi-3-mini-4k-instruct.Q4_K_M.gguf` | ~2.2 GB | Text cleanup and refinement |
+| Whisper Base (English) | `ggml-base.en.bin` | ~142 MB | Local speech-to-text transcription |
+| Phi-3 Mini 4K Instruct | `phi-3-mini-4k-instruct.Q4_K_M.gguf` | ~2.2 GB | Local text cleanup and refinement |
 
 Models are automatically downloaded on first run through the setup wizard, or can be manually downloaded from the Settings panel.
+
+### Cloud Providers (Optional)
+
+If you prefer cloud-based processing, Murmur supports the following providers:
+
+**Transcription:**
+- OpenAI Whisper API
+- Deepgram
+- Groq
+
+**Text Cleanup:**
+- OpenAI (GPT models)
+- Anthropic (Claude models)
+
+Cloud providers require API keys and an internet connection. Your audio/text will be sent to third-party servers when using these options.
 
 ## Troubleshooting
 
@@ -350,4 +379,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-**Murmur** - Speak freely, type accurately.
+**Murmur** - Local-first voice to text. Speak freely, type accurately.
