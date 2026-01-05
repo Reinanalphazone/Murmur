@@ -1,0 +1,79 @@
+[package]
+name = "murmur"
+version = "0.1.0"
+description = "Voice-to-text desktop application with AI cleanup"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "murmur_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+# Tauri core
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-opener = "2"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Audio capture
+cpal = "0.15"
+hound = "3.5"  # WAV file handling
+
+# Speech-to-text (Whisper.cpp bindings)
+# NOTE: Requires MSVC toolchain and LLVM/clang on Windows
+# Run from VS Developer Command Prompt with LIBCLANG_PATH set
+# Using latest version with better Windows support
+whisper-rs = "0.15"
+
+# LLM inference (llama.cpp bindings)
+# NOTE: Same requirements as whisper-rs
+llama-cpp-2 = "0.1"
+
+# Global hotkeys
+global-hotkey = "0.6"
+
+# Clipboard & keyboard simulation
+arboard = "3"
+enigo = "0.2"
+
+# Database
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# HTTP client for API calls and model downloads
+reqwest = { version = "0.12", features = ["json", "stream", "multipart"] }
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Directories for app data
+dirs = "5"
+
+# For progress tracking during downloads
+futures-util = "0.3"
+
+[profile.release]
+# Optimize for size and speed
+lto = true
+opt-level = 3
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.dev]
+# Faster dev builds
+incremental = true
+opt-level = 0
